@@ -70,7 +70,7 @@ public class SalleExposition {
 	 * @return l'oeuvre supprimee ou null si le numeroOeuvre ne correspond a aucune oeuvre actuellement exposee 
 	 */
 	public String supprimer(int numeroOeuvre){
-		// TODO = dans le vecteur, l'indice supprimé ne doit pas disparaitre. il doit juste être remplacé par null.
+		//dans le vecteur, l'indice supprimé ne doit pas disparaitre. il doit juste être remplacé par null.
 		// je veux push la pile emplacementsLiberes et retirer du vecteur l'oeuvre
 		Emplacement elemASuppr = emplacements.element(numeroOeuvre);
 		if (elemASuppr != null){
