@@ -1,24 +1,27 @@
+import java.util.ArrayList;
+
 /**
- * @author Alicia BOLTRYK
+ * @author 
  *
  */
 
-public class Consigne{
-	Pile<Casier> casiersLibres;
-	Casier[] tousLesCasiers;
+public class ConsigneLIFO {
+	private ArrayList<Casier> casiersLibres;
+	private Casier[] tousLesCasiers;
 	
 	/**
 	 * construit une consigne de gare avec tous les casiers libres au depart
 	 * @param nombreCasiers le nombre de casier de la consigne
 	 * @throws IllegalArgumentException si le nombre de casiers est negatif ou nul
 	 */
-	public Consigne(int nombreCasiers){
+	public ConsigneLIFO(int nombreCasiers){
 		if (nombreCasiers <= 0) throw new IllegalArgumentException();
 		tousLesCasiers = new Casier[nombreCasiers];
-		casiersLibres = new PileImpl<>();
+		casiersLibres = new ArrayList<>();
 		for (int i = 0; i < nombreCasiers; i++) {
-			tousLesCasiers[i] = new Casier(i);
-			casiersLibres.push(tousLesCasiers[i]);
+			Casier casier = new Casier(i);
+			tousLesCasiers[i] = casier;
+			casiersLibres.add(casier);
 		}
 	}
 
@@ -27,12 +30,12 @@ public class Consigne{
 	 * @return true s'il reste au moins un casier de libre, false sinon
 	 */
 	public boolean resteUnCasierLibre() {
-		return !casiersLibres.estVide();
+		return (!casiersLibres.isEmpty());
 	}
 
 	
 	/**
-	 * attribue un casier libre
+	 * attribue un casier libre selon le principe LIFO
 	 * @param motDePasse le mot de passe qui permettra de liberer le casier
 	 * @return le numero du casier attribue ou -1 s'il n'y en a plus de libre
 	 * @throws IllegalArgumentException si le mot de passe est vide ou null
@@ -40,7 +43,7 @@ public class Consigne{
 	public int attribuerCasierLibre(String motDePasse) {
 		if (motDePasse == null || motDePasse.equals("")) throw new IllegalArgumentException();
 		if (!resteUnCasierLibre()) return -1;
-		Casier casierAttribue = casiersLibres.pop();
+		Casier casierAttribue = casiersLibres.remove(casiersLibres.size()-1);
 		casierAttribue.setMotDePasse(motDePasse);
 		return casierAttribue.getNumero();
 	}
@@ -57,7 +60,7 @@ public class Consigne{
 		if (motDePasse == null || motDePasse.equals("")) throw new IllegalArgumentException();
 		if (numeroCasier < 0 || numeroCasier >= tousLesCasiers.length || tousLesCasiers[numeroCasier].getMotDePasse() != motDePasse) return false;
 		tousLesCasiers[numeroCasier].setMotDePasse(null);
-		casiersLibres.push(tousLesCasiers[numeroCasier]);
+		casiersLibres.add(tousLesCasiers[numeroCasier]);
 		return true;
 	}
 

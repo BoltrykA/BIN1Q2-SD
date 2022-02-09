@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd63d5f5-ac7a-4d49-8890-35c89568797a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/BIN1Q2-SD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/Semaine 1 Stack &amp; Vecteurs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/CabinesDEssayage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Casier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Consigne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Emplacement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/GestionSalleExposition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Pile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/PileDeCaracteres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/PileDeCaracteresImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/PileImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/PileVideException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/SalleExposition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/TestCabinesDEssayage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/TestConsigne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/TestPileDeCaracteresImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/TestVecteurDeCaracteresImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Vecteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/VecteurDeCaracteres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/VecteurDeCaracteresImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/VecteurImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/VecteurOutException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/CabinesDEssayage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/Casier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/Consigne.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/Emplacement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/GestionSalleExposition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/Pile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/PileDeCaracteres.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/PileDeCaracteresImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/PileImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/PileVideException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/SalleExposition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/TestCabinesDEssayage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/TestConsigne.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/TestPileDeCaracteresImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/TestVecteurDeCaracteresImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/Vecteur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/VecteurDeCaracteres.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/VecteurDeCaracteresImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/VecteurImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 1 Stack &amp; Vecteurs/VecteurOutException.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/VecteurImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/SalleExposition.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/GestionSalleExposition.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/PileImpl.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/VecteurDeCaracteresImpl.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="24VOtUoLvvaxoBCD3iZ5T0GBfcu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Math 2" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
+  </component>
+  <component name="RunManager" selected="Application.GestionSalleExposition">
+    <configuration name="GestionSalleExposition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GestionSalleExposition" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCabinesDEssayage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestCabinesDEssayage" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestConsigne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestConsigne" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPileDeCaracteresImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestPileDeCaracteresImpl" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestVecteurDeCaracteresImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestVecteurDeCaracteresImpl" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GestionSalleExposition" />
+        <item itemvalue="Application.TestConsigne" />
+        <item itemvalue="Application.TestVecteurDeCaracteresImpl" />
+        <item itemvalue="Application.TestPileDeCaracteresImpl" />
+        <item itemvalue="Application.TestCabinesDEssayage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd63d5f5-ac7a-4d49-8890-35c89568797a" name="Changes" comment="" />
+      <created>1643712503792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643712503792</updated>
+      <workItem from="1643712505924" duration="3476000" />
+      <workItem from="1643755633852" duration="68000" />
+      <workItem from="1643795337217" duration="135000" />
+      <workItem from="1643806399166" duration="6205000" />
+      <workItem from="1643832318117" duration="108000" />
+      <workItem from="1643900580635" duration="6077000" />
+      <workItem from="1643907216753" duration="173000" />
+      <workItem from="1643959338604" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -1,24 +1,26 @@
 /**
- * @author Alicia BOLTRYK
+ * @author annick dupont 
  *
  */
 
 public class Consigne{
-	Pile<Casier> casiersLibres;
-	Casier[] tousLesCasiers;
+	private Pile<Casier> casiersLibres;
+	private Casier[] tousLesCasiers;
 	
 	/**
 	 * construit une consigne de gare avec tous les casiers libres au depart
-	 * @param nombreCasiers le nombre de casier de la consigne
+	 * @param nombreCasiers le nombre de casiers de la consigne
 	 * @throws IllegalArgumentException si le nombre de casiers est negatif ou nul
 	 */
 	public Consigne(int nombreCasiers){
-		if (nombreCasiers <= 0) throw new IllegalArgumentException();
+		if(nombreCasiers<=0)
+			throw new IllegalArgumentException();
+		casiersLibres = new PileImpl<Casier>();
 		tousLesCasiers = new Casier[nombreCasiers];
-		casiersLibres = new PileImpl<>();
 		for (int i = 0; i < nombreCasiers; i++) {
-			tousLesCasiers[i] = new Casier(i);
-			casiersLibres.push(tousLesCasiers[i]);
+			Casier casier = new Casier(i);
+			casiersLibres.push(casier);
+			tousLesCasiers[i]=casier;
 		}
 	}
 
@@ -27,7 +29,7 @@ public class Consigne{
 	 * @return true s'il reste au moins un casier de libre, false sinon
 	 */
 	public boolean resteUnCasierLibre() {
-		return !casiersLibres.estVide();
+		return casiersLibres.taille() !=0;
 	}
 
 	
@@ -37,12 +39,14 @@ public class Consigne{
 	 * @return le numero du casier attribue ou -1 s'il n'y en a plus de libre
 	 * @throws IllegalArgumentException si le mot de passe est vide ou null
 	 */
-	public int attribuerCasierLibre(String motDePasse) {
-		if (motDePasse == null || motDePasse.equals("")) throw new IllegalArgumentException();
-		if (!resteUnCasierLibre()) return -1;
-		Casier casierAttribue = casiersLibres.pop();
-		casierAttribue.setMotDePasse(motDePasse);
-		return casierAttribue.getNumero();
+	public int attribuerCasierLibre(String motDePasse) {	
+		if(motDePasse==null||motDePasse.equals(""))
+			throw new IllegalArgumentException();
+		if(casiersLibres.estVide())
+			return -1;
+		Casier casier = casiersLibres.pop();
+		casier.setMotDePasse(motDePasse);
+		return casier.getNumero();
 	}
 
 	
@@ -54,10 +58,15 @@ public class Consigne{
 	 * @throws IllegalArgumentException si le mot de passe est vide ou null
 	 */
 	public boolean libererCasier(int numeroCasier, String motDePasse) {
-		if (motDePasse == null || motDePasse.equals("")) throw new IllegalArgumentException();
-		if (numeroCasier < 0 || numeroCasier >= tousLesCasiers.length || tousLesCasiers[numeroCasier].getMotDePasse() != motDePasse) return false;
-		tousLesCasiers[numeroCasier].setMotDePasse(null);
-		casiersLibres.push(tousLesCasiers[numeroCasier]);
+		if(motDePasse==null||motDePasse.equals(""))
+			throw new IllegalArgumentException();
+		if(numeroCasier<0 || numeroCasier >= tousLesCasiers.length)
+			return false;
+		Casier casier = tousLesCasiers[numeroCasier];
+		if(!casier.getMotDePasse().equals(motDePasse))
+			return false;
+		casier.setMotDePasse("");
+		casiersLibres.push(casier);
 		return true;
 	}
 
