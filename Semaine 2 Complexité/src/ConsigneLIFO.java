@@ -1,9 +1,11 @@
 import java.util.ArrayList;
-import java.util.Objects;
 
+/**
+ * @author Alicia Boltryk
+ *
+ */
 
-public class ConsigneFIFO {
-	
+public class ConsigneLIFO {
 	private ArrayList<Casier> casiersLibres;
 	private Casier[] tousLesCasiers;
 	
@@ -12,10 +14,10 @@ public class ConsigneFIFO {
 	 * @param nombreCasiers le nombre de casier de la consigne
 	 * @throws IllegalArgumentException si le nombre de casiers est negatif ou nul
 	 */
-	public ConsigneFIFO(int nombreCasiers){
+	public ConsigneLIFO(int nombreCasiers){
 		if (nombreCasiers <= 0) throw new IllegalArgumentException();
-		casiersLibres = new ArrayList<>();
 		tousLesCasiers = new Casier[nombreCasiers];
+		casiersLibres = new ArrayList<>();
 		for (int i = 0; i < nombreCasiers; i++) {
 			Casier casier = new Casier(i);
 			tousLesCasiers[i] = casier;
@@ -33,7 +35,7 @@ public class ConsigneFIFO {
 
 	
 	/**
-	 * attribue un casier libre selon le principe FIFO
+	 * attribue un casier libre selon le principe LIFO
 	 * @param motDePasse le mot de passe qui permettra de liberer le casier
 	 * @return le numero du casier attribue ou -1 s'il n'y en a plus de libre
 	 * @throws IllegalArgumentException si le mot de passe est vide ou null
@@ -41,7 +43,7 @@ public class ConsigneFIFO {
 	public int attribuerCasierLibre(String motDePasse) {
 		if (motDePasse == null || motDePasse.equals("")) throw new IllegalArgumentException();
 		if (!resteUnCasierLibre()) return -1;
-		Casier casierAttribue = casiersLibres.remove(0);
+		Casier casierAttribue = casiersLibres.remove(casiersLibres.size()-1);
 		casierAttribue.setMotDePasse(motDePasse);
 		return casierAttribue.getNumero();
 	}
@@ -56,9 +58,10 @@ public class ConsigneFIFO {
 	 */
 	public boolean libererCasier(int numeroCasier, String motDePasse) {
 		if (motDePasse == null || motDePasse.equals("")) throw new IllegalArgumentException();
-		if (numeroCasier < 0 || numeroCasier >= tousLesCasiers.length || !Objects.equals(tousLesCasiers[numeroCasier].getMotDePasse(), motDePasse)) return false;
-		tousLesCasiers[numeroCasier].setMotDePasse("");
+		if (numeroCasier < 0 || numeroCasier >= tousLesCasiers.length || tousLesCasiers[numeroCasier].getMotDePasse() != motDePasse) return false;
+		tousLesCasiers[numeroCasier].setMotDePasse(null);
 		casiersLibres.add(tousLesCasiers[numeroCasier]);
 		return true;
 	}
+
 }
