@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd63d5f5-ac7a-4d49-8890-35c89568797a" name="Changes" comment="Completion exercices Semaine 2">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24VOtUoLvvaxoBCD3iZ5T0GBfcu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
+  </component>
+  <component name="RunManager" selected="Application.TestFileImplChainee">
+    <configuration name="JeuDeTestsDeque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JeuDeTestsDeque" />
+      <module name="Semaine 2 File Via Table" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestConsigneFIFO (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestConsigneFIFO" />
+      <module name="Semaine 2 File Via Table" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFileAttenteImpressions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestFileAttenteImpressions" />
+      <module name="Semaine 2 File Via Table" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFileImplChainee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestFileImplChainee" />
+      <module name="Semaine 3 Pile via Pointeurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPileImplChainee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestPileImplChainee" />
+      <module name="Semaine 3 Pile via Pointeurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestFileImplChainee" />
+        <item itemvalue="Application.TestPileImplChainee" />
+        <item itemvalue="Application.JeuDeTestsDeque" />
+        <item itemvalue="Application.TestFileAttenteImpressions" />
+        <item itemvalue="Application.TestConsigneFIFO (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd63d5f5-ac7a-4d49-8890-35c89568797a" name="Changes" comment="" />
+      <created>1643712503792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643712503792</updated>
+      <workItem from="1643712505924" duration="3476000" />
+      <workItem from="1643755633852" duration="68000" />
+      <workItem from="1643795337217" duration="135000" />
+      <workItem from="1643806399166" duration="6205000" />
+      <workItem from="1643832318117" duration="108000" />
+      <workItem from="1643900580635" duration="6077000" />
+      <workItem from="1643931828360" duration="408000" />
+      <workItem from="1644003486146" duration="5888000" />
+      <workItem from="1644014609006" duration="414000" />
+      <workItem from="1644122034020" duration="18000" />
+      <workItem from="1644319521059" duration="3769000" />
+      <workItem from="1644410358091" duration="5458000" />
+      <workItem from="1644495591692" duration="534000" />
+      <workItem from="1644505270153" duration="6262000" />
+      <workItem from="1644635570195" duration="3584000" />
+      <workItem from="1644689275430" duration="3657000" />
+      <workItem from="1644694410199" duration="104000" />
+      <workItem from="1644694978174" duration="5430000" />
+      <workItem from="1644764761592" duration="6345000" />
+      <workItem from="1644772169614" duration="577000" />
+      <workItem from="1644918660558" duration="3509000" />
+    </task>
+    <task id="LOCAL-00001" summary="Exercices de soumission de la semaine 1 (structure de données &quot;Piles&quot; et &quot;Vecteurs&quot;)">
+      <created>1644014670295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644014670295</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Exercices de soumission de la semaine 1 (structure de données &quot;Piles&quot; et &quot;Vecteurs&quot;)">
+      <created>1644014711685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644014711685</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Exercices semaines 2 partie 1">
+      <created>1644397467636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644397467636</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Exercices semaines 2 partie 1">
+      <created>1644410459660</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644410459660</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Completion exercices Semaine 2">
+      <created>1644772718464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644772718464</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Exercices de soumission de la semaine 1 (structure de données &quot;Piles&quot; et &quot;Vecteurs&quot;)" />
+    <MESSAGE value="Exercices semaines 2 partie 1" />
+    <MESSAGE value="Completion exercices Semaine 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completion exercices Semaine 2" />
+  </component>
+</project>
