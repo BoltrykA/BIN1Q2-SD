@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -131,12 +132,24 @@ public class GestionBrocante {
 			return;
 		}
 		System.out.print("Entrez le nom du demandeur: ");
+
 		String nom = scanner.nextLine();
-		System.out.println("Entrez son adresse e-mail: ");
-		String email = scanner.nextLine();
-		System.out.println("Entrez son numéro de téléphone: ");
-		String numTel = scanner.nextLine();
-		Exposant exposant = new Exposant(nom,email,numTel);
+		Exposant exposant;
+
+		if (!brocante.estUnExposant(nom)){
+			System.out.println("Cette personne n'a pas encore d'emplacement dans la brocante.");
+			System.out.println("Entrez son adresse e-mail: ");
+			String email = scanner.nextLine();
+			System.out.println("Entrez son numéro de téléphone: ");
+			String numTel = scanner.nextLine();
+			exposant = new Exposant(nom,email,numTel);
+
+		} else {
+			System.out.println("Cette personne est déjà enregistrée dans la liste des exposants.");
+			exposant = brocante.getExposant(nom);
+		}
+
+
 		int numero = brocante.attribuerAutomatiquementEmplacement(exposant);
 
 		if (numero != -1) System.out.println(nom + " s'est fait attribuer l'emplacement numéro " + numero);
