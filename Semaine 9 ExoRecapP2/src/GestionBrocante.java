@@ -165,6 +165,14 @@ public class GestionBrocante {
 			return;
 		}
 		System.out.println("Voici les informations sur l'exposant: " + exposant);
+		System.out.println("Voici la liste des numéros d'emplacements dont il dispose :");
+		Iterator<Emplacement> emplacements = exposant.touslesEmplacements();
+		System.out.print("[");
+		while (emplacements.hasNext()){
+			System.out.print(emplacements.next().getNumero());
+			if (emplacements.hasNext()) System.out.print(", ");
+		}
+		System.out.print("]");
 	}
 
 	private static void tousLesExposants(){

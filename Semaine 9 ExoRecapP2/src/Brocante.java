@@ -125,6 +125,7 @@ public class Brocante {
 				mapExposants.put(nom, exposant);
 			}
 
+			exposant.ajouterEmplacement(emplacement);
 			nbrPlacesOccupees++;
 			return emplacement.getNumero();
 		}
