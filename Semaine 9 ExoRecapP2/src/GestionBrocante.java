@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Scanner;
 
 
@@ -61,6 +62,8 @@ public class GestionBrocante {
 			System.out.println();
 			System.out.println("1 -> reserver un emplacement");
 			System.out.println("2 -> afficher la brocante");
+			System.out.println("3 -> Consulter un exposant via son nom");
+			System.out.println("4 -> Lister tous les exposants");
 			System.out.println();
 			System.out.print("Votre choix : ");
 			choix = scanner.nextInt();
@@ -72,9 +75,16 @@ public class GestionBrocante {
 			case 2:
 				afficherTout();
 				break;
+			case 3:
+				consulterExposant();
+				break;
+			case 4:
+				tousLesExposants();
+				break;
+
 			}
 
-		} while (choix >= 1 && choix <= 2);
+		} while (choix >= 1 && choix <= 4);
 		
 		System.out.println("Fin de la brocante!");
 	}
@@ -95,6 +105,7 @@ public class GestionBrocante {
 		}
 		if (brocante.nombreEmplacementsRiverain(nom) == 3){
 			System.out.println("Ce riverain a déjà trois emplacements de réservés !");
+			return;
 		}
 		System.out.println("Entrez son adresse e-mail: ");
 		String email = scanner.nextLine();
@@ -130,6 +141,27 @@ public class GestionBrocante {
 
 		if (numero != -1) System.out.println(nom + " s'est fait attribuer l'emplacement numéro " + numero);
 		else System.out.println("L'attribution a échoué.");
+	}
+
+	private static void consulterExposant() {
+		System.out.println("Entrez le nom de l'exposant à consulter :");
+		String nom = scanner.nextLine();
+		Exposant exposant = brocante.getExposant(nom);
+		if (exposant == null) {
+			System.out.println("Désolé, l'exposant n'existe pas");
+			return;
+		}
+		System.out.println("Voici les informations sur l'exposant: " + exposant);
+	}
+
+	private static void tousLesExposants(){
+		if (brocante.estVide()) System.out.println("La brocante est vide.");
+		else {
+			Iterator<Exposant> exposants = brocante.tousLesExposants();
+			while (exposants.hasNext()){
+				System.out.println(exposants.next());
+			}
+		}
 	}
 
 	private static void afficherTout() {

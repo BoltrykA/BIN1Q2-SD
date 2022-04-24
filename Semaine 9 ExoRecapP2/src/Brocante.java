@@ -1,7 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 
+/**
+ * @author Alicia Boltryk
+ *
+ */
 
 public class Brocante {
 	
@@ -12,6 +17,8 @@ public class Brocante {
 	private HashMap<String, Integer> mapRiverains;
 	private HashMap<String, Exposant> mapExposants;
 	private ArrayDeque<Emplacement> pileEmplacementsLibres;
+	private int nbrPlacesOccupees; // sert uniquement pour la methode estVide()
+									// (une méthode que j'ai ajouté moi-meme pour un affichage plus propre de GestionBrocante)
 	
 	
 	/**
@@ -26,6 +33,7 @@ public class Brocante {
 		tableEmplacements = new Emplacement[nombreEmplacements];
 		mapRiverains = new HashMap<>();
 		pileEmplacementsLibres = new ArrayDeque<Emplacement>();
+		nbrPlacesOccupees = 0;
 
 		for (int i = 0; i < tableEmplacements.length; i++) {
 			tableEmplacements[i] = new Emplacement(i);
@@ -55,12 +63,19 @@ public class Brocante {
 
 		if (numeroEmplacement < 0 || numeroEmplacement >= tableEmplacements.length) throw new IllegalArgumentException("Le numéro d'emplacement est invalide");
 		if (phase != 1) throw new IllegalStateException("Pas la bonne phase !");
-		// en ayant déjà effectué les tests de validité dans ma classe GestionBrocante (si c'est un riverain,
-		// si il a déjà assez d'emplacements réservés,...), je les ai retiré ici pour éviter les doublons de "if"s.
+
+		// les tests de validité sont également faits dans GestionBrocante, mais je les garde quand même dans cette fonction
+		// (en imaginant que ma fonction pourrait être utilisée dans un autre contexte).
+
+		if (!estLibre(numeroEmplacement)) return false;
 		String demandeur = exposant.getNom();
+		if (!estUnRiverain(demandeur)) return false;
 		int nbrEmplacements = nombreEmplacementsRiverain(demandeur);
+		if (nbrEmplacements == 3) return false;
+
 		tableEmplacements[numeroEmplacement].setExposant(exposant);
 		mapRiverains.put(demandeur, ++nbrEmplacements);
+		nbrPlacesOccupees++;
 
 		return true;
 	}
@@ -81,11 +96,13 @@ public class Brocante {
 	public void changerPhase(){
 		if (phase != 2){
 			phase = 2;
+			mapExposants = new HashMap<>();
 			pileEmplacementsLibres = new ArrayDeque<>();
 			for (Emplacement tableEmplacement : tableEmplacements) {
-				if (tableEmplacement.getExposant() == null) pileEmplacementsLibres.push(tableEmplacement);
+				Exposant currentExposant = tableEmplacement.getExposant();
+				if (currentExposant == null) pileEmplacementsLibres.push(tableEmplacement);
+				else mapExposants.put(currentExposant.getNom(), currentExposant); // les riverains deviennent exposants et je les place dans le mapExposants
 			}
-			mapExposants = new HashMap<>();
 		}
 	}
 	
@@ -101,15 +118,14 @@ public class Brocante {
 		if (emplacementLibre()){
 			Emplacement emplacement = pileEmplacementsLibres.pop();
 			emplacement.setExposant(exposant);
-			System.out.println(tableEmplacements[emplacement.getNumero()].getExposant());
-			tableEmplacements[emplacement.getNumero()] = emplacement; // est-ce nécessaire ?
-			System.out.println(tableEmplacements[emplacement.getNumero()].getExposant());
 
 			String nom = exposant.getNom();
+
 			if (!estUnExposant(nom)){
 				mapExposants.put(nom, exposant);
 			}
 
+			nbrPlacesOccupees++;
 			return emplacement.getNumero();
 		}
 
@@ -152,6 +168,31 @@ public class Brocante {
 	public boolean emplacementLibre(){
 		return pileEmplacementsLibres.size() != 0;
 	}
+
+	/**
+	 *
+	 * @param nom de l'exposant (String)
+	 * @return l'exposant associé au nom dans le mapExposants
+	 */
+	public Exposant getExposant(String nom){
+		return mapExposants.get(nom);
+	}
+
+	/**
+	 *
+	 * @return l'ensemble des exposants dans le mapExposants
+	 */
+	public Iterator<Exposant> tousLesExposants(){
+		return mapExposants.values().iterator();
+	}
+
+	/**
+	 *
+	 * @return true si la brocante n'est occupée par aucun exposant, false sinon
+	 */
+	public boolean estVide(){
+		return nbrPlacesOccupees == 0;
+	}
 	
 	/**
 	 * renvoie, sous forme d'une chaine de caracteres, tous les numeros des emplacements et leurs eventuels occupants
@@ -160,8 +201,11 @@ public class Brocante {
 		// Va servir pour debugger
 		String aRenvoyer = "";
 		aRenvoyer = aRenvoyer + "\ntableEmplacements" + Arrays.toString(tableEmplacements);
+		if (phase == 1)
 		aRenvoyer = aRenvoyer + "\nmapRiverains" + mapRiverains.toString();
 		aRenvoyer = aRenvoyer + "\npileEmplacementsLibres" + pileEmplacementsLibres.toString();
+		if (phase == 2)
+		aRenvoyer = aRenvoyer + "\nmapExposants" + mapExposants.toString();
 		return aRenvoyer;
 		// A modifier lorsque toute l'application sera au point!
 	}

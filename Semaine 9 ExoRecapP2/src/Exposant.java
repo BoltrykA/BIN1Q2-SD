@@ -1,12 +1,29 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
 public class Exposant {
     private String nom;
     private String email;
     private String numTel;
+    private LinkedList<Emplacement> listeEmplacements;
 
     public Exposant(String nom, String email, String numTel){
         this.nom = nom;
         this.email = email;
         this.numTel = numTel;
+        listeEmplacements = new LinkedList<>();
+    }
+
+    public Iterator<Emplacement> touslesEmplacements(){
+        return listeEmplacements.iterator();
+    }
+
+    public void ajouterEmplacement(Emplacement emplacement){
+       listeEmplacements.add(emplacement);
+    }
+
+    public void supprimerEmplacement(Emplacement emplacement){
+        listeEmplacements.remove(emplacement);
     }
 
     public void setEmail(String email) {
@@ -33,6 +50,8 @@ public class Exposant {
     public String toString() {
         return "Exposant{" +
                 "nom='" + nom + '\'' +
+                ", email='" + email + '\'' +
+                ", numTel='" + numTel + '\'' +
                 '}';
     }
 }
