@@ -16,27 +16,26 @@ public class Brocante {
 	private Emplacement[] tableEmplacements;
 	private HashMap<String, Integer> mapRiverains;
 	private HashMap<String, Exposant> mapExposants;
-	private ArrayDeque<Emplacement> pileEmplacementsLibres;
+	private HashMap<Character, ArrayDeque<Emplacement>> mapPilesEmplacement;
 	private int nbrPlacesOccupees; // sert uniquement pour la methode estVide()
 									// (une méthode que j'ai ajouté moi-meme pour un affichage plus propre de GestionBrocante)
 	
 	
 	/**
 	 * initialise une brocante avec nombre emplacements
-	 * @param nombreEmplacements le nombre d'emplacements
+	 * @param typesEmplacement la table d'emplacements avec leur type
 	 * @param tableRiverains la table des riverains 
 	 * @throws IllegalArgumentException si le nombre d'emplacements est negatif ou nul ou si la table des riverains est null
 	 */
-	public Brocante(int nombreEmplacements, String[] tableRiverains){
-		if (nombreEmplacements <= 0 || tableRiverains == null) throw new IllegalArgumentException();
+	public Brocante(char[] typesEmplacement, String[] tableRiverains){
+		if (typesEmplacement.length <= 0 || tableRiverains == null) throw new IllegalArgumentException();
 
-		tableEmplacements = new Emplacement[nombreEmplacements];
+		tableEmplacements = new Emplacement[typesEmplacement.length];
 		mapRiverains = new HashMap<>();
-		pileEmplacementsLibres = new ArrayDeque<Emplacement>();
 		nbrPlacesOccupees = 0;
 
 		for (int i = 0; i < tableEmplacements.length; i++) {
-			tableEmplacements[i] = new Emplacement(i);
+			tableEmplacements[i] = new Emplacement(i, typesEmplacement[i]);
 		}
 
 
@@ -97,10 +96,17 @@ public class Brocante {
 		if (phase != 2){
 			phase = 2;
 			mapExposants = new HashMap<>();
-			pileEmplacementsLibres = new ArrayDeque<>();
-			for (Emplacement tableEmplacement : tableEmplacements) {
-				Exposant currentExposant = tableEmplacement.getExposant();
-				if (currentExposant == null) pileEmplacementsLibres.push(tableEmplacement);
+			mapPilesEmplacement = new HashMap<>();
+			for (Emplacement emplacement : tableEmplacements) {
+				Exposant currentExposant = emplacement.getExposant();
+				char typeEmplacement = emplacement.getType();
+
+				if (!mapPilesEmplacement.containsKey(typeEmplacement)){
+					mapPilesEmplacement.put(typeEmplacement, new ArrayDeque<>());
+				}
+
+				ArrayDeque<Emplacement> pileEmplacements = mapPilesEmplacement.get(typeEmplacement);
+				if (currentExposant == null) pileEmplacements.push(emplacement);
 				else mapExposants.put(currentExposant.getNom(), currentExposant); // les riverains deviennent exposants et je les place dans le mapExposants
 			}
 		}
@@ -112,11 +118,16 @@ public class Brocante {
 	 * @return le numero de l'emplacement attribue ou -1 si plus d'emplacement libre
 	 * @throws IllegalStateException si on n'est pas en phase 2
 	 */
-	public int attribuerAutomatiquementEmplacement(Exposant exposant){
+	public int attribuerAutomatiquementEmplacement(Exposant exposant, char type){
 		if (phase != 2) throw new IllegalStateException("Pas la bonne phase !");
 
-		if (emplacementLibre()){
-			Emplacement emplacement = pileEmplacementsLibres.pop();
+		//idem ici. je garde les tests de validité des paramètres, même si je les réitère dans GestionBrocante.
+		// je les garde en imaginant que la fonction pourrait être utilisée autre part que dans GestionBrocante.
+
+		if (emplacementLibre(type)){
+			ArrayDeque<Emplacement> emplacementsDuType = mapPilesEmplacement.get(type);
+			if (emplacementsDuType.isEmpty()) return -1;
+			Emplacement emplacement = emplacementsDuType.pop();
 			emplacement.setExposant(exposant);
 
 			String nom = exposant.getNom();
@@ -132,6 +143,30 @@ public class Brocante {
 
 		return -1;
 	
+	}
+
+	public boolean libererEmplacement(String nom, int numeroEmplacement){
+		if (phase != 2) throw new IllegalStateException("Pas la bonne phase !");
+		if (numeroEmplacement < 0 || numeroEmplacement >= tableEmplacements.length)
+			throw new IllegalArgumentException("Le numéro d'emplacement est invalide");
+
+		//idem ici. je garde les tests de validité des paramètres, même si je les réitère dans GestionBrocante.
+		// je les garde en imaginant que la fonction pourrait être utilisée autre part que dans GestionBrocante.
+
+		if (!estUnExposant(nom)) return false;
+
+		Exposant exposant = getExposant(nom);
+		Emplacement emplacement = tableEmplacements[numeroEmplacement];
+		if (!exposant.supprimerEmplacement(emplacement)) return false;
+
+		char type = emplacement.getType();
+		mapPilesEmplacement.get(type).push(emplacement);
+
+		System.out.println(emplacement.getExposant());
+		emplacement.setExposant(null);
+		nbrPlacesOccupees--;
+
+		return true;
 	}
 
 	/**
@@ -166,9 +201,23 @@ public class Brocante {
 	 * indique si il y a encore un emplacement libre
 	 * @return true si emplacement encore libre, false sinon
 	 */
-	public boolean emplacementLibre(){
-		return pileEmplacementsLibres.size() != 0;
+	public boolean emplacementLibre(char type){
+		if (!mapPilesEmplacement.containsKey(type)) return false;
+		return !mapPilesEmplacement.get(type).isEmpty();
 	}
+
+	/**
+	 *
+	 * @param numEmplacement
+	 * @return l'emplacement associé
+	 */
+	public Emplacement getEmplacement(int numEmplacement){
+		if (numEmplacement < 0 || numEmplacement >= tableEmplacements.length)
+			throw new IllegalArgumentException("Le numéro d'emplacement est invalide");
+		return tableEmplacements[numEmplacement];
+	}
+
+
 
 	/**
 	 *
@@ -194,6 +243,10 @@ public class Brocante {
 	public boolean estVide(){
 		return nbrPlacesOccupees == 0;
 	}
+
+	public boolean estPleine(){
+		return mapPilesEmplacement.values().isEmpty();
+	}
 	
 	/**
 	 * renvoie, sous forme d'une chaine de caracteres, tous les numeros des emplacements et leurs eventuels occupants
@@ -203,10 +256,11 @@ public class Brocante {
 		String aRenvoyer = "";
 		aRenvoyer = aRenvoyer + "\ntableEmplacements" + Arrays.toString(tableEmplacements);
 		if (phase == 1)
-		aRenvoyer = aRenvoyer + "\nmapRiverains" + mapRiverains.toString();
-		aRenvoyer = aRenvoyer + "\npileEmplacementsLibres" + pileEmplacementsLibres.toString();
-		if (phase == 2)
-		aRenvoyer = aRenvoyer + "\nmapExposants" + mapExposants.toString();
+			aRenvoyer = aRenvoyer + "\nmapRiverains" + mapRiverains.toString();
+		else {
+			aRenvoyer = aRenvoyer + "\nmapPileEmplacementsLibres" + mapPilesEmplacement;
+			aRenvoyer = aRenvoyer + "\nmapExposants" + mapExposants.toString();
+		}
 		return aRenvoyer;
 		// A modifier lorsque toute l'application sera au point!
 	}

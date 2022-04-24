@@ -1,14 +1,22 @@
+import java.util.ArrayList;
+
 public class Emplacement {
     private int numero;
     private Exposant exposant;
+    private char type;
 
-    public Emplacement(int numero, Exposant exposant){
+    public Emplacement(int numero, char type, Exposant exposant){
         this.numero = numero;
         this.exposant = exposant;
+        this.type = type;
     }
 
-    public Emplacement(int numero){
-        this(numero,null);
+    public Emplacement(int numero, char type){ // pour l'initialiser sans exposant assigné
+        this(numero,type, null);
+    }
+
+    public Emplacement(int numero){ // pour la phase 1
+        this.numero = numero;
     }
 
     public int getNumero() {
@@ -17,6 +25,10 @@ public class Emplacement {
 
     public Exposant getExposant() {
         return exposant;
+    }
+
+    public char getType() {
+        return type;
     }
 
     public void setExposant(Exposant exposant) {

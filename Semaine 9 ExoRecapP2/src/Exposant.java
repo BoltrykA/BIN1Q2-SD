@@ -18,12 +18,16 @@ public class Exposant {
         return listeEmplacements.iterator();
     }
 
+    public boolean contient(Emplacement emplacement){
+        return listeEmplacements.contains(emplacement);
+    }
+
     public void ajouterEmplacement(Emplacement emplacement){
        listeEmplacements.add(emplacement);
     }
 
-    public void supprimerEmplacement(Emplacement emplacement){
-        listeEmplacements.remove(emplacement);
+    public boolean supprimerEmplacement(Emplacement emplacement){
+        return (listeEmplacements.remove(emplacement));
     }
 
     public void setEmail(String email) {

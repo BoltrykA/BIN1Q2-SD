@@ -18,6 +18,12 @@ public class GestionBrocante {
 		System.out.println("----------------------------");
 		System.out.print("Entrez le nombre d'emplacements : ");
 		int nombreEmplacements = scanner.nextInt();
+		char[] tableEmplacements = new char[nombreEmplacements];
+		for (int i = 0; i < tableEmplacements.length; i++) {
+			System.out.println("Entrez le type de l'emplacement numéro " + i + ": ");
+			tableEmplacements[i] = scanner.next().charAt(0);
+			System.out.println();
+		}
 		System.out.print("Entrez le nombre de riverains : ");
 		int nombreRiverains = scanner.nextInt();
 		scanner.nextLine();
@@ -26,7 +32,8 @@ public class GestionBrocante {
 			System.out.print("Entrez le nom du riverain "+ (i+1) + ": ");
 			tableRiverains[i] = scanner.nextLine();
 		}
-		brocante = new Brocante(nombreEmplacements, tableRiverains);
+
+		brocante = new Brocante(tableEmplacements, tableRiverains);
 		System.out.println();
 		
 		
@@ -65,6 +72,7 @@ public class GestionBrocante {
 			System.out.println("2 -> afficher la brocante");
 			System.out.println("3 -> Consulter un exposant via son nom");
 			System.out.println("4 -> Lister tous les exposants");
+			System.out.println("5 -> Libérer un emplacement");
 			System.out.println();
 			System.out.print("Votre choix : ");
 			choix = scanner.nextInt();
@@ -82,10 +90,12 @@ public class GestionBrocante {
 			case 4:
 				tousLesExposants();
 				break;
-
+			case 5:
+				libererEmplacement();
+				break;
 			}
 
-		} while (choix >= 1 && choix <= 4);
+		} while (choix >= 1 && choix <= 5);
 		
 		System.out.println("Fin de la brocante!");
 	}
@@ -127,8 +137,16 @@ public class GestionBrocante {
 	}
 
 	private static void reserverPhase2() {
-		if (!brocante.emplacementLibre()){
-			System.out.println("Désolé, la brocante est pleine !");
+		if (brocante.estPleine()){
+			System.out.println("Désolée, la brocante est pleine !");
+			return;
+		}
+
+		System.out.println("Entrez le type d'emplacement souhaité");
+		char type = scanner.next().charAt(0);
+
+		if (!brocante.emplacementLibre(type)){
+			System.out.println("Désolé, il n'y a pas d'emplacement de ce type disponible !");
 			return;
 		}
 		System.out.print("Entrez le nom du demandeur: ");
@@ -150,10 +168,10 @@ public class GestionBrocante {
 		}
 
 
-		int numero = brocante.attribuerAutomatiquementEmplacement(exposant);
+		int numero = brocante.attribuerAutomatiquementEmplacement(exposant, type);
 
-		if (numero != -1) System.out.println(nom + " s'est fait attribuer l'emplacement numéro " + numero);
-		else System.out.println("L'attribution a échoué.");
+		if (numero != -1) System.out.println(nom + " s'est fait attribuer l'emplacement numéro " + numero + " et de type " + type + ".");
+		else System.out.println("Désolé, l'attribution a échoué car il n'y a pas d'emplacement de ce type de libre.");
 	}
 
 	private static void consulterExposant() {
@@ -166,13 +184,7 @@ public class GestionBrocante {
 		}
 		System.out.println("Voici les informations sur l'exposant: " + exposant);
 		System.out.println("Voici la liste des numéros d'emplacements dont il dispose :");
-		Iterator<Emplacement> emplacements = exposant.touslesEmplacements();
-		System.out.print("[");
-		while (emplacements.hasNext()){
-			System.out.print(emplacements.next().getNumero());
-			if (emplacements.hasNext()) System.out.print(", ");
-		}
-		System.out.print("]");
+		System.out.println(emplacementsExposant(exposant));
 	}
 
 	private static void tousLesExposants(){
@@ -183,6 +195,53 @@ public class GestionBrocante {
 				System.out.println(exposants.next());
 			}
 		}
+	}
+
+	public static void libererEmplacement(){
+		if (brocante.estVide()) System.out.println("La brocante est déjà vide.");
+		System.out.println("Entrez le nom de l'exposant :");
+		String nom = scanner.nextLine();
+		Exposant exposant = brocante.getExposant(nom);
+
+		if (exposant == null) {
+			System.out.println("Désolé, l'exposant n'est pas répertorié dans la brocante");
+			return;
+		}
+
+		System.out.println("Voici la liste des numéros d'emplacements dont l'exposant dispose :");
+		System.out.println(emplacementsExposant(exposant));
+		System.out.println("Entrez le numéro de l'emplacement à libérer :");
+		int num = scanner.nextInt();
+
+		Emplacement emplacement;
+
+		try{
+			emplacement = brocante.getEmplacement(num);
+		} catch (IllegalArgumentException e){
+			System.out.println(e.getMessage());
+			return;
+		}
+
+		if (emplacement.getExposant() == null || emplacement.getExposant() != exposant){
+			System.out.println("L'exposant ne détient pas cet emplacement !");
+			return;
+		}
+
+		if (brocante.libererEmplacement(nom,num)) System.out.println("La libération a réussi.");
+		else System.out.println("La libération a échoué."); // normalement, avec tous les tests de validité,
+		// l'utilisateur ne devrait jamais recevoir ce message. mais je le garde au cas ou il y a une exception ou un bug
+
+	}
+
+	private static String emplacementsExposant(Exposant exposant) {
+		Iterator<Emplacement> emplacements = exposant.touslesEmplacements();
+		String res = "[";
+		while (emplacements.hasNext()){
+			res += emplacements.next().getNumero();
+			if (emplacements.hasNext()) res += ", ";
+		}
+		res += "]";
+		return res;
 	}
 
 	private static void afficherTout() {
