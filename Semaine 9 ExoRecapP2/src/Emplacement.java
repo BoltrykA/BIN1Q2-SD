@@ -40,6 +40,7 @@ public class Emplacement {
         return "Emplacement{" +
                 "numero=" + numero +
                 ", exposant=" + exposant +
+                ", type=" + type +
                 '}';
     }
 }

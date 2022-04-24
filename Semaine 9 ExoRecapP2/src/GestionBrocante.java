@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class GestionBrocante {
 	
-	private static MonScanner scanner = new MonScanner("lancement.txt");
+	private static Scanner scanner = new Scanner(System.in);
 	private static Brocante brocante;
 
 	public static void main(String[] args) {	
@@ -118,11 +118,18 @@ public class GestionBrocante {
 			System.out.println("Ce riverain a déjà trois emplacements de réservés !");
 			return;
 		}
-		System.out.println("Entrez son adresse e-mail: ");
-		String email = scanner.nextLine();
-		System.out.println("Entrez son numéro de téléphone: ");
-		String numTel = scanner.nextLine();
-		Exposant exposant = new Exposant(nom,email,numTel);
+
+		Exposant exposant = brocante.getExposant(nom);
+
+		if (exposant == null){
+			System.out.println("Le riverain n'est pas encore repertorié parmi les exposants.");
+			System.out.println("Entrez son adresse e-mail: ");
+			String email = scanner.nextLine();
+			System.out.println("Entrez son numéro de téléphone: ");
+			String numTel = scanner.nextLine();
+			exposant = new Exposant(nom,email,numTel);
+		}
+
 
 		boolean aReussi = false;
 		try {
@@ -137,13 +144,10 @@ public class GestionBrocante {
 	}
 
 	private static void reserverPhase2() {
-		if (brocante.estPleine()){
-			System.out.println("Désolée, la brocante est pleine !");
-			return;
-		}
 
-		System.out.println("Entrez le type d'emplacement souhaité");
+		System.out.println("Entrez le type d'emplacement souhaité : ");
 		char type = scanner.next().charAt(0);
+		scanner.nextLine();
 
 		if (!brocante.emplacementLibre(type)){
 			System.out.println("Désolé, il n'y a pas d'emplacement de ce type disponible !");

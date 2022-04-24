@@ -33,6 +33,7 @@ public class Brocante {
 		tableEmplacements = new Emplacement[typesEmplacement.length];
 		mapRiverains = new HashMap<>();
 		nbrPlacesOccupees = 0;
+		mapExposants = new HashMap<>();
 
 		for (int i = 0; i < tableEmplacements.length; i++) {
 			tableEmplacements[i] = new Emplacement(i, typesEmplacement[i]);
@@ -69,10 +70,14 @@ public class Brocante {
 		if (!estLibre(numeroEmplacement)) return false;
 		String demandeur = exposant.getNom();
 		if (!estUnRiverain(demandeur)) return false;
+		if (!estUnExposant(demandeur)){
+			mapExposants.put(demandeur, exposant);
+		}
 		int nbrEmplacements = nombreEmplacementsRiverain(demandeur);
 		if (nbrEmplacements == 3) return false;
 
 		tableEmplacements[numeroEmplacement].setExposant(exposant);
+		exposant.ajouterEmplacement(tableEmplacements[numeroEmplacement]);
 		mapRiverains.put(demandeur, ++nbrEmplacements);
 		nbrPlacesOccupees++;
 
@@ -162,7 +167,6 @@ public class Brocante {
 		char type = emplacement.getType();
 		mapPilesEmplacement.get(type).push(emplacement);
 
-		System.out.println(emplacement.getExposant());
 		emplacement.setExposant(null);
 		nbrPlacesOccupees--;
 
@@ -242,10 +246,6 @@ public class Brocante {
 	 */
 	public boolean estVide(){
 		return nbrPlacesOccupees == 0;
-	}
-
-	public boolean estPleine(){
-		return mapPilesEmplacement.values().isEmpty();
 	}
 	
 	/**
