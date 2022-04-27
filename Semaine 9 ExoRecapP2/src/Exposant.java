@@ -1,6 +1,10 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * @author Alicia Boltryk
+ *
+ */
 public class Exposant {
     private String nom;
     private String email;

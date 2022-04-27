@@ -1,4 +1,7 @@
-import java.util.ArrayList;
+/**
+ * @author Alicia Boltryk
+ *
+ */
 
 public class Emplacement {
     private int numero;

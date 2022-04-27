@@ -1,7 +1,10 @@
-import java.sql.SQLOutput;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/**
+ * @author Alicia Boltryk
+ *
+ */
 
 public class GestionBrocante {
 	
