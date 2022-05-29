@@ -37,7 +37,7 @@ public class ExpressionArithmetique extends ArbreDeCaracteres {
 		return nombreOperations(racine, operateur);
 	}
 
-	public int nombreOperations(NoeudCaractere noeud, char operateur){
+	private int nombreOperations(NoeudCaractere noeud, char operateur){
 		if (noeud == null) return 0;
 		if (noeud.caractere == operateur){
 			return 1 + nombreOperations(noeud.gauche, operateur) + nombreOperations(noeud.droit, operateur);
@@ -56,7 +56,7 @@ public class ExpressionArithmetique extends ArbreDeCaracteres {
 		return uniquementDesAdditions(racine);
 	}
 
-	public boolean uniquementDesAdditions(NoeudCaractere noeud){
+	private boolean uniquementDesAdditions(NoeudCaractere noeud){
 		if (noeud == null) return true;
 		if (!Character.isDigit(noeud.caractere) && noeud.caractere != '+') return false;
 		return uniquementDesAdditions(noeud.gauche) && uniquementDesAdditions(noeud.droit);
@@ -79,7 +79,7 @@ public class ExpressionArithmetique extends ArbreDeCaracteres {
 		return listeChars.size();
 	}
 
-	public void ajouterEnsemble(NoeudCaractere noeud, HashSet<Character> liste){
+	private void ajouterEnsemble(NoeudCaractere noeud, HashSet<Character> liste){
 		if (noeud == null) return;
 		if (Character.isDigit(noeud.caractere)){
 			liste.add(noeud.caractere);
@@ -104,7 +104,7 @@ public class ExpressionArithmetique extends ArbreDeCaracteres {
 		return resultat(racine);
 	}
 
-	public double resultat(NoeudCaractere noeud){
+	private double resultat(NoeudCaractere noeud){
 		if (noeud == null) return 0;
 		if (Character.isDigit(noeud.caractere)) return (int) noeud.caractere - 48 ;
 
@@ -134,7 +134,7 @@ public class ExpressionArithmetique extends ArbreDeCaracteres {
 		return notationInfixe(racine);
 	}
 
-	public String notationInfixe(NoeudCaractere noeud){
+	private String notationInfixe(NoeudCaractere noeud){
 		if (noeud == null) return "";
 		if (noeud.droit == null && noeud.gauche == null) return String.valueOf(noeud.caractere);
 		if (noeud.droit == null) return "(" + notationInfixe(noeud.gauche) + ")";
