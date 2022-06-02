@@ -4,9 +4,17 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BIN1Q2-SD.iml" filepath="$PROJECT_DIR$/.idea/BIN1Q2-SD.iml" />
       <module fileurl="file://$PROJECT_DIR$/Examen Juin 2021 Bleu/Examen Juin 2021 Bleu.iml" filepath="$PROJECT_DIR$/Examen Juin 2021 Bleu/Examen Juin 2021 Bleu.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/Semaine 1 Stack &amp; Vecteurs.iml" filepath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/Semaine 1 Stack &amp; Vecteurs.iml" />
       <module fileurl="file://$PROJECT_DIR$/Semaine 10 ABR/Semaine 10 ABR.iml" filepath="$PROJECT_DIR$/Semaine 10 ABR/Semaine 10 ABR.iml" />
       <module fileurl="file://$PROJECT_DIR$/Semaine 10 Binary Tree/Semaine 10 Binary Tree.iml" filepath="$PROJECT_DIR$/Semaine 10 Binary Tree/Semaine 10 Binary Tree.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Juin 2021 Jaune/Juin 2021 Jaune.iml" filepath="$PROJECT_DIR$/Juin 2021 Jaune/Juin 2021 Jaune.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/Semaine 1 Stack &amp; Vecteurs.iml" filepath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/Semaine 1 Stack &amp; Vecteurs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Semaine 10 ABR/Semaine 10 ABR.iml" filepath="$PROJECT_DIR$/Semaine 10 ABR/Semaine 10 ABR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Semaine 10 Binary Tree/Semaine 10 Binary Tree.iml" filepath="$PROJECT_DIR$/Semaine 10 Binary Tree/Semaine 10 Binary Tree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Semaine 11 Comparable/Semaine 11 Comparable.iml" filepath="$PROJECT_DIR$/Semaine 11 Comparable/Semaine 11 Comparable.iml" />
+>>>>>>> 343e6460bce404475b16262e4dd6eaa57da782bb
       <module fileurl="file://$PROJECT_DIR$/Semaine 10 Binary Tree/src/Semaine 11 Parcours Arbes.iml" filepath="$PROJECT_DIR$/Semaine 10 Binary Tree/src/Semaine 11 Parcours Arbes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Semaine 11 Parcours Arbres/Semaine 11 Parcours Arbres.iml" filepath="$PROJECT_DIR$/Semaine 11 Parcours Arbres/Semaine 11 Parcours Arbres.iml" />
       <module fileurl="file://$PROJECT_DIR$/Semaine 12 App Ticket/Semaine 12 App Ticket.iml" filepath="$PROJECT_DIR$/Semaine 12 App Ticket/Semaine 12 App Ticket.iml" />
@@ -25,6 +33,7 @@
       <module fileurl="file://$PROJECT_DIR$/Semaine 8 LinkedHashSet (ListeSD)/Semaine 8 LinkedHashSet (ListeSD).iml" filepath="$PROJECT_DIR$/Semaine 8 LinkedHashSet (ListeSD)/Semaine 8 LinkedHashSet (ListeSD).iml" />
       <module fileurl="file://$PROJECT_DIR$/Semaine 9 ExoRecapP1/Semaine 9 ExoRecapP1.iml" filepath="$PROJECT_DIR$/Semaine 9 ExoRecapP1/Semaine 9 ExoRecapP1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Semaine 9 ExoRecapP2/Semaine 9 ExoRecapP2.iml" filepath="$PROJECT_DIR$/Semaine 9 ExoRecapP2/Semaine 9 ExoRecapP2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Septembre 2021/Septembre 2021.iml" filepath="$PROJECT_DIR$/Septembre 2021/Septembre 2021.iml" />
     </modules>
   </component>
 </project>
