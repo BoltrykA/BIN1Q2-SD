@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd63d5f5-ac7a-4d49-8890-35c89568797a" name="Changes" comment="amélioration 3">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace-DESKTOP-P0RLJSG-2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace-DESKTOP-P0RLJSG.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin 2021 Jaune/Juin 2021 Jaune.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/Juin2017PM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/Deque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/DequeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/ListeCaracteres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/TestDequeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/TestListeCaracteres.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/TestUnshuffleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Juin2017PM/src/UnshuffleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Consigne3Formats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/Parenthesage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 1 Stack &amp; Vecteurs/src/TestConsigne3Formats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/ABRDEntiers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/ArbreDEntiers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/ArbreDEntiersPlus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/ArbreVideException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/TestABRDEntiers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/TestArbreComplet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 10 ABR/src/TestHauteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semaine 11 Comparable/Semaine 11 Comparable.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Septembre 2021/Septembre 2021.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/Commande.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/EnsembleTrie.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/EnsembleTrieImpl$Noeud.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/EnsembleTrieImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/GestionSessionDeVente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/ListeBalPromo$Noeud.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/ListeBalPromo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/Lyceen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/SessionDeVente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/TestEnsembleTrieImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/TestListeBalPromo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Examen Juin 2021 Bleu/TestSessionDeVente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/ABRDEntiers$NoeudEntier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/ABRDEntiers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/ArbreDEntiers$NoeudEntier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/ArbreDEntiers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/ArbreDEntiersPlus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/ArbreVideException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/TestABRDEntiers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/TestArbreComplet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 10 ABR/TestHauteur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ABRDEntiers$InIterateur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ABRDEntiers$NoeudEntier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ABRDEntiers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ArbreDEntiers$InIterateur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ArbreDEntiers$IterateurParNiveau.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ArbreDEntiers$NoeudEntier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ArbreDEntiers$PostIterateur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ArbreDEntiers$PreIterateur.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/ArbreDEntiers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/TestEquilibre.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 11 Parcours Arbres/TestIterateurs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 12 PriorityQueue/FileDePrioriteDEntiers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 12 PriorityQueue/FileDePrioriteDEntiersImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 12 PriorityQueue/FileVideException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 12 PriorityQueue/HeapSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Semaine 12 PriorityQueue/TestFileDePrioriteDEntiersImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="24VOtUoLvvaxoBCD3iZ5T0GBfcu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alici\OneDrive - Haute Ecole Léonard de Vinci\BA1\Q2\BIN1Q2-SD\Semaine 11 Parcours Arbres\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestDequeImpl">
+    <configuration name="GestionEuroMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GestionEuroMatch" />
+      <module name="Juin 2021 Jaune" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Parenthesage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Parenthesage" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestConsigne3Formats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestConsigne3Formats" />
+      <module name="Semaine 1 Stack &amp; Vecteurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDequeImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestDequeImpl" />
+      <module name="Juin2017PM" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestListeCaracteres" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestListeCaracteres" />
+      <module name="Juin2017PM" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestDequeImpl" />
+        <item itemvalue="Application.TestConsigne3Formats" />
+        <item itemvalue="Application.Parenthesage" />
+        <item itemvalue="Application.TestListeCaracteres" />
+        <item itemvalue="Application.GestionEuroMatch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd63d5f5-ac7a-4d49-8890-35c89568797a" name="Changes" comment="" />
+      <created>1643712503792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643712503792</updated>
+      <workItem from="1643712505924" duration="3476000" />
+      <workItem from="1643755633852" duration="68000" />
+      <workItem from="1643795337217" duration="135000" />
+      <workItem from="1643806399166" duration="6205000" />
+      <workItem from="1643832318117" duration="108000" />
+      <workItem from="1643900580635" duration="6077000" />
+      <workItem from="1643931828360" duration="408000" />
+      <workItem from="1644003486146" duration="5888000" />
+      <workItem from="1644014609006" duration="414000" />
+      <workItem from="1644122034020" duration="18000" />
+      <workItem from="1644319521059" duration="3769000" />
+      <workItem from="1644410358091" duration="5458000" />
+      <workItem from="1644495591692" duration="534000" />
+      <workItem from="1644505270153" duration="6262000" />
+      <workItem from="1644635570195" duration="3584000" />
+      <workItem from="1644689275430" duration="3657000" />
+      <workItem from="1644694410199" duration="104000" />
+      <workItem from="1644694978174" duration="5430000" />
+      <workItem from="1644764761592" duration="6345000" />
+      <workItem from="1644772169614" duration="577000" />
+      <workItem from="1644918660558" duration="3244000" />
+      <workItem from="1644946041103" duration="2953000" />
+      <workItem from="1645005220934" duration="265000" />
+      <workItem from="1645024179480" duration="11742000" />
+      <workItem from="1645054380637" duration="1733000" />
+      <workItem from="1645095486661" duration="623000" />
+      <workItem from="1645116345872" duration="64000" />
+      <workItem from="1645361627424" duration="567000" />
+      <workItem from="1645907261566" duration="13000" />
+      <workItem from="1646086459890" duration="3364000" />
+      <workItem from="1646117031986" duration="3662000" />
+      <workItem from="1646120730309" duration="930000" />
+      <workItem from="1646429003390" duration="15000" />
+      <workItem from="1646737526750" duration="505000" />
+      <workItem from="1646738050036" duration="1529000" />
+      <workItem from="1646756681615" duration="427000" />
+      <workItem from="1646819703126" duration="20000" />
+      <workItem from="1646829607832" duration="5978000" />
+      <workItem from="1646983895997" duration="16000" />
+      <workItem from="1647185823486" duration="2190000" />
+      <workItem from="1647338992728" duration="6286000" />
+      <workItem from="1647427415278" duration="22000" />
+      <workItem from="1647437331126" duration="4408000" />
+      <workItem from="1647588930737" duration="16000" />
+      <workItem from="1647595472970" duration="334000" />
+      <workItem from="1647596628581" duration="6726000" />
+      <workItem from="1647692840759" duration="2310000" />
+      <workItem from="1647884773893" duration="40000" />
+      <workItem from="1647942946866" duration="5074000" />
+      <workItem from="1647948396782" duration="1121000" />
+      <workItem from="1648543796830" duration="5213000" />
+      <workItem from="1648630657770" duration="19000" />
+      <workItem from="1649021611185" duration="637000" />
+      <workItem from="1649106512189" duration="3167000" />
+      <workItem from="1649495960933" duration="11115000" />
+      <workItem from="1649675828546" duration="15000" />
+      <workItem from="1649975683078" duration="5559000" />
+      <workItem from="1650021973356" duration="7124000" />
+      <workItem from="1650358541312" duration="2878000" />
+      <workItem from="1650361525465" duration="558000" />
+      <workItem from="1650362353466" duration="2802000" />
+      <workItem from="1650437261152" duration="2275000" />
+      <workItem from="1650455545289" duration="6968000" />
+      <workItem from="1650755418075" duration="5371000" />
+      <workItem from="1650799955251" duration="14014000" />
+      <workItem from="1650815756829" duration="37000" />
+      <workItem from="1650815813728" duration="19000" />
+      <workItem from="1650815895901" duration="44000" />
+      <workItem from="1650826287835" duration="211000" />
+      <workItem from="1650963075244" duration="4483000" />
+      <workItem from="1651053294547" duration="12000" />
+      <workItem from="1651060200653" duration="5821000" />
+      <workItem from="1651067173239" duration="314000" />
+      <workItem from="1651214937390" duration="38000" />
+      <workItem from="1651325141485" duration="26000" />
+      <workItem from="1651569614810" duration="4894000" />
+      <workItem from="1651657601329" duration="1086000" />
+      <workItem from="1652173235355" duration="3197000" />
+      <workItem from="1652177862561" duration="5312000" />
+      <workItem from="1652958660288" duration="3147000" />
+      <workItem from="1653062663364" duration="41000" />
+      <workItem from="1653121810320" duration="31000" />
+      <workItem from="1653485469446" duration="26000" />
+      <workItem from="1653864184584" duration="793000" />
+      <workItem from="1653865365847" duration="868000" />
+      <workItem from="1654100323242" duration="2592000" />
+      <workItem from="1654104393761" duration="6949000" />
+      <workItem from="1654118680956" duration="5309000" />
+      <workItem from="1654166401657" duration="1375000" />
+    </task>
+    <task id="LOCAL-00001" summary="Exercices de soumission de la semaine 1 (structure de données &quot;Piles&quot; et &quot;Vecteurs&quot;)">
+      <created>1644014670295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644014670295</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Exercices de soumission de la semaine 1 (structure de données &quot;Piles&quot; et &quot;Vecteurs&quot;)">
+      <created>1644014711685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644014711685</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Exercices semaines 2 partie 1">
+      <created>1644397467636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644397467636</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Exercices semaines 2 partie 1">
+      <created>1644410459660</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644410459660</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Completion exercices Semaine 2">
+      <created>1644772718464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644772718464</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Exos Semaine 3 fin">
+      <created>1645362129524</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645362129524</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Exos obligatoires semaine 6">
+      <created>1647695032555</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647695032555</updated>
+    </task>
+    <task id="LOCAL-00008" summary="etoffement amélioration 1">
+      <created>1650800834507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650800834507</updated>
+    </task>
+    <task id="LOCAL-00009" summary="amélioration 3 (todo : testing)">
+      <created>1650813086310</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650813086310</updated>
+    </task>
+    <task id="LOCAL-00010" summary="amélioration 3">
+      <created>1650815582410</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650815582410</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Exercices de soumission de la semaine 1 (structure de données &quot;Piles&quot; et &quot;Vecteurs&quot;)" />
+    <MESSAGE value="Exercices semaines 2 partie 1" />
+    <MESSAGE value="Completion exercices Semaine 2" />
+    <MESSAGE value="Exercices semaine 3 jusqu'à Bal2" />
+    <MESSAGE value="Exos Semaine 3 fin" />
+    <MESSAGE value="Exos obligatoires semaine 6" />
+    <MESSAGE value="etoffement amélioration 1" />
+    <MESSAGE value="amélioration 3 (todo : testing)" />
+    <MESSAGE value="amélioration 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="amélioration 3" />
+  </component>
+</project>
